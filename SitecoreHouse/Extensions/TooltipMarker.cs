@@ -77,7 +77,8 @@ namespace SitecoreHouse.Extensions
         /// <returns></returns>
         public virtual string GetStart()
         {
-            return "<div style=\"width: 20px; height: 20px; background-color: green; position: absolute;\"></div>";
+            string tooltipText = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ornare eu tortor auctor pulvinar. Mauris vulputate, dolor sed feugiat tempus.";
+            return "<div class=\"sh-comments ninja\">" + tooltipText + "</div>";
         }
     }
 }
