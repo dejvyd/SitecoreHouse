@@ -8,8 +8,16 @@ using SitecoreHouse.Extensions;
 
 namespace SitecoreHouse.Pipelines
 {
+    /// <summary>
+    /// Adds Tool Tip Into Current Rendering
+    /// </summary>
+    /// <seealso cref="Sitecore.Mvc.Pipelines.Response.RenderRendering.RenderRenderingProcessor" />
     public class AddToolTipToRenderings : RenderRenderingProcessor
     {
+        /// <summary>
+        /// Processes the specified arguments.
+        /// </summary>
+        /// <param name="args">The arguments.</param>
         public override void Process(RenderRenderingArgs args)
         {
             if (!string.IsNullOrEmpty(args.Rendering.DataSource) && args.PageContext.Item.Database.Name != "core" && args.PageContext.Item.Database.GetItem(args.Rendering.DataSource) == null)
@@ -30,7 +38,10 @@ namespace SitecoreHouse.Pipelines
                 args.Disposables.Insert(index, (IDisposable)new Wrapper(args.Writer, marker));
             }
         }
-
+        /// <summary>
+        /// Gets the html marker.
+        /// </summary>
+        /// <returns>Html marker</returns>
         protected virtual IMarker GetMarker()
         {
             RenderingContext currentOrNull1 = RenderingContext.CurrentOrNull;
