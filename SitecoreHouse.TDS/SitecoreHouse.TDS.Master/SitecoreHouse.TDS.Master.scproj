@@ -34,8 +34,6 @@
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>.\bin\Debug\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
-    <SitecoreDeployFolder>D:\_Dev\_Projs\SitecoreHouse\_WWW\Website</SitecoreDeployFolder>
-    <SitecoreWebUrl>http://sitecorehouse/</SitecoreWebUrl>
     <SitecoreAccessGuid>1fb51d36-66fc-49de-abc7-d80b4ad05cfa</SitecoreAccessGuid>
     <InstallSitecoreConnector>True</InstallSitecoreConnector>
     <DisableFileDeployment>False</DisableFileDeployment>
