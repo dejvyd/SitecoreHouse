@@ -1,0 +1,27 @@
+body.pagemode-edit div.sh-comments
+{
+    width: auto;
+    height: auto;
+    background-color: green;
+    position: absolute;
+    bottom: auto;
+    top: auto;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 15px;
+    z-index: 98;
+
+    &.ninja{
+	    display: none;
+	    visibility: hidden;
+    }
+}
+
+//not works :(
+.sh-comments-hover:hover{
+    > div.sh-comments{
+	    display: block;
+	    visibility: visible;
+    }
+}

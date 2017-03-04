@@ -4,12 +4,21 @@ using Sitecore.Diagnostics;
 using Sitecore.Mvc.ExperienceEditor.Presentation;
 using Sitecore.Mvc.Pipelines.Response.RenderRendering;
 using Sitecore.Mvc.Presentation;
+using SitecoreHouse.Constants;
 using SitecoreHouse.Extensions;
 
 namespace SitecoreHouse.Pipelines
 {
+    /// <summary>
+    /// Adds Tool Tip Into Current Rendering
+    /// </summary>
+    /// <seealso cref="Sitecore.Mvc.Pipelines.Response.RenderRendering.RenderRenderingProcessor" />
     public class AddToolTipToRenderings : RenderRenderingProcessor
     {
+        /// <summary>
+        /// Processes the specified arguments.
+        /// </summary>
+        /// <param name="args">The arguments.</param>
         public override void Process(RenderRenderingArgs args)
         {
             if (!string.IsNullOrEmpty(args.Rendering.DataSource) && args.PageContext.Item.Database.Name != "core" && args.PageContext.Item.Database.GetItem(args.Rendering.DataSource) == null)
@@ -30,16 +39,29 @@ namespace SitecoreHouse.Pipelines
                 args.Disposables.Insert(index, (IDisposable)new Wrapper(args.Writer, marker));
             }
         }
-
+        /// <summary>
+        /// Gets the html marker for Renderings with Tooltips.
+        /// </summary>
+        /// <returns>Html marker</returns>
         protected virtual IMarker GetMarker()
         {
-            RenderingContext currentOrNull1 = RenderingContext.CurrentOrNull;
-            if (currentOrNull1 == null || currentOrNull1.Rendering == null)
+            RenderingContext currentRendering = RenderingContext.CurrentOrNull;
+            if (currentRendering == null || currentRendering.Rendering == null)
                 return (IMarker)null;
-            PlaceholderContext currentOrNull2 = PlaceholderContext.CurrentOrNull;
-            if (currentOrNull2 == null)
+            
+            PlaceholderContext currentPlaceholder = PlaceholderContext.CurrentOrNull;
+            if (currentPlaceholder == null)
                 return (IMarker)null;
-            return (IMarker)new TooltipMarker(currentOrNull1, currentOrNull2);
+
+            var isDerrivedFromToolTipRenderingType = currentRendering.ContextItem.IsDerived(RenderingsTemplatesIds.ExpTooltipControllerRendering) ||
+            currentRendering.ContextItem.IsDerived(RenderingsTemplatesIds.ExpTooltipViewRendering);
+
+            if (isDerrivedFromToolTipRenderingType)
+                return (IMarker)null;
+
+            return (IMarker)new TooltipMarker(currentRendering, currentPlaceholder);
         }
+
+
     }
 }

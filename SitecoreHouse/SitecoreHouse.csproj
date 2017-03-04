@@ -141,12 +141,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\RenderingsTemplatesIds.cs" />
+    <Compile Include="Extensions\ItemExtensions.cs" />
+    <Compile Include="Extensions\TemplateExtensions.cs" />
     <Compile Include="Extensions\TooltipMarker.cs" />
     <Compile Include="Pipelines\AddToolTipToRenderings.cs" />
     <Compile Include="Pipelines\GetExperienceTooltipViewRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\SitecoreHouse\Comments.js" />
+    <Content Include="Styles\SitecoreHouse\comments.css">
+      <DependentUpon>comments.scss</DependentUpon>
+    </Content>
     <Content Include="Views\web.config" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
@@ -158,10 +165,13 @@
     <Folder Include="Presentation\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\zFeature\zRenderingTooltips.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="App_Config\Include\zFeature\zRenderingTooltips.config" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Properties\PublishProfiles\LocalPublishProfile.pubxml" />
+    <Content Include="Styles\SitecoreHouse\comments.scss" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
