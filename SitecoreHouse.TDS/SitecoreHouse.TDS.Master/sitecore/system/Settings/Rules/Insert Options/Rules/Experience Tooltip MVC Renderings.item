@@ -1,0 +1,274 @@
+----item----
+version: 1
+id: {BCF4B89B-BE7F-4EE7-9D49-5206566442BB}
+database: master
+path: /sitecore/system/Settings/Rules/Insert Options/Rules/Experience Tooltip MVC Renderings
+parent: {FF0BC016-2D01-4F55-A020-EF6FC2FE7559}
+name: Experience Tooltip MVC Renderings
+master: {00000000-0000-0000-0000-000000000000}
+template: {664E5035-EB8C-4BA1-9731-A098FCC9127A}
+templatekey: Insert Options Rule
+created: 20170304T083152Z
+
+----field----
+field: {FA307B86-DA2A-44BD-887D-E2057CDB4948}
+name: Rule
+key: rule
+content-length: 1154
+
+<ruleset>
+  <rule uid="{2E89945B-16DE-4654-97BE-D820EA843AA9}">
+    <conditions>
+      <or uid="ACE6BE1F0EE4458FA7545142146A0095">
+        <and uid="0396B677E8A94B49A4975683FB224491">
+          <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="E6A4E56AFFFB414C99B3267C53B8D3B1" itemid="{32566F0E-7686-45F1-A12F-D7260BD78BC3}" />
+          <condition id="{5DE6D53E-EA62-4D17-8BDD-FEBCD80AC07B}" uid="29A964FFD95D4B41890EDDA95C2DEBF9" templateid="{239F9CF4-E5A0-44E0-B342-0F32CD4C6D8B}" />
+        </and>
+        <and uid="EEF5C82442AE4218A4B12C2AF6F9E2D5">
+          <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="010DF64491564187B6C72B288774590C" itemid="{32566F0E-7686-45F1-A12F-D7260BD78BC3}" />
+          <condition id="{5DE6D53E-EA62-4D17-8BDD-FEBCD80AC07B}" uid="881E4E9984B94A9B85314F7502C6D38F" templateid="{7EE0975B-0698-493E-B3A2-0B2EF33D0522}" />
+        </and>
+      </or>
+    </conditions>
+    <actions>
+      <action id="{918FFCF0-F9E1-4DB6-A191-3EFA5A91C583}" uid="{F1E653AA-B941-4B4F-8372-CC3B29CA3976}" insertoptionid="{0EDFEFE3-064C-44E4-AD39-962276DABF34}" />
+    </actions>
+  </rule>
+</ruleset>
+----version----
+language: da
+version: 1
+revision: 04be5c2d-0c53-48b4-9a03-06d688f0e3ea
+
+----field----
+field: {9E0287D9-AF90-41AD-8D36-332375E194D6}
+name: Name
+key: name
+content-length: 143
+
+Når elementet er et underelement af renderinger, og skabelonen er en renderingsmappe eller en knude, skal du indsætte en mulighed for Mvc-typer
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 15
+
+Mvc-renderinger
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161221T104324Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+04be5c2d-0c53-48b4-9a03-06d688f0e3ea
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161221T104324Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: de-DE
+version: 1
+revision: bd9f5eb7-1439-4c54-8258-7414d420a0e2
+
+----field----
+field: {9E0287D9-AF90-41AD-8D36-332375E194D6}
+name: Name
+key: name
+content-length: 150
+
+Wenn das Item ein Subitem von Renderings ist und das Template ein Ordner, Rendering Ordner oder Knoten, fügen Sie Einfügen-Option für Mvc Typen hinzu.
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 14
+
+Mvc Renderings
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161221T104759Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+bd9f5eb7-1439-4c54-8258-7414d420a0e2
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161221T104759Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: en
+version: 1
+revision: 5fce4292-30de-4011-8096-f08bbdccbb12
+
+----field----
+field: {9E0287D9-AF90-41AD-8D36-332375E194D6}
+name: Name
+key: name
+content-length: 114
+
+When item is a subitem of Renderings and the template is Rendering Folder or Node, add insert option for MVC types
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20080923T083739
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+5fce4292-30de-4011-8096-f08bbdccbb12
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170304T141311Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----version----
+language: ja-JP
+version: 1
+revision: bccf575d-9c1e-444c-b2b0-1ce72074f064
+
+----field----
+field: {9E0287D9-AF90-41AD-8D36-332375E194D6}
+name: Name
+key: name
+content-length: 89
+
+アイテムが「レンダリングのサブアイテム」かつ「ノード」または「フォルダー」または「レンダリング フォルダー」テンプレートを使用している場合、挿入オプションに MVC 型を追加する
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 10
+
+MVC レンダリング
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161221T105203Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+bccf575d-9c1e-444c-b2b0-1ce72074f064
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161221T105203Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

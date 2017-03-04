@@ -11,8 +11,6 @@ Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "SitecoreHouse.TDS.Master", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SitecoreHouse.TDS", "SitecoreHouse.TDS", "{E58CA215-2D73-4E9F-A2C7-395D2F701FBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreHouse.TDS.Model", "SitecoreHouse.TDS\SitecoreHouse.TDS.Model\SitecoreHouse.TDS.Model.csproj", "{0604DF0D-6368-401C-8D8D-CD0F585B6EEE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,16 +31,11 @@ Global
 		{31D8C0D0-C90C-4B2B-BFB4-BA7EB14D0E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31D8C0D0-C90C-4B2B-BFB4-BA7EB14D0E21}.Release|Any CPU.Build.0 = Release|Any CPU
 		{31D8C0D0-C90C-4B2B-BFB4-BA7EB14D0E21}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{0604DF0D-6368-401C-8D8D-CD0F585B6EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0604DF0D-6368-401C-8D8D-CD0F585B6EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0604DF0D-6368-401C-8D8D-CD0F585B6EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0604DF0D-6368-401C-8D8D-CD0F585B6EEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{31D8C0D0-C90C-4B2B-BFB4-BA7EB14D0E21} = {E58CA215-2D73-4E9F-A2C7-395D2F701FBA}
-		{0604DF0D-6368-401C-8D8D-CD0F585B6EEE} = {E58CA215-2D73-4E9F-A2C7-395D2F701FBA}
 	EndGlobalSection
 EndGlobal
