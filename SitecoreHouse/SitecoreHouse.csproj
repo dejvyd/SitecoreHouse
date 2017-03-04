@@ -141,6 +141,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\RenderingsTemplatesIds.cs" />
+    <Compile Include="Extensions\ItemExtensions.cs" />
+    <Compile Include="Extensions\TemplateExtensions.cs" />
     <Compile Include="Extensions\TooltipMarker.cs" />
     <Compile Include="Pipelines\AddToolTipToRenderings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

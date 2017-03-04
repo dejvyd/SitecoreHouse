@@ -4,6 +4,7 @@ using Sitecore.Diagnostics;
 using Sitecore.Mvc.ExperienceEditor.Presentation;
 using Sitecore.Mvc.Pipelines.Response.RenderRendering;
 using Sitecore.Mvc.Presentation;
+using SitecoreHouse.Constants;
 using SitecoreHouse.Extensions;
 
 namespace SitecoreHouse.Pipelines
@@ -39,18 +40,28 @@ namespace SitecoreHouse.Pipelines
             }
         }
         /// <summary>
-        /// Gets the html marker.
+        /// Gets the html marker for Renderings with Tooltips.
         /// </summary>
         /// <returns>Html marker</returns>
         protected virtual IMarker GetMarker()
         {
-            RenderingContext currentOrNull1 = RenderingContext.CurrentOrNull;
-            if (currentOrNull1 == null || currentOrNull1.Rendering == null)
+            RenderingContext currentRendering = RenderingContext.CurrentOrNull;
+            if (currentRendering == null || currentRendering.Rendering == null)
                 return (IMarker)null;
-            PlaceholderContext currentOrNull2 = PlaceholderContext.CurrentOrNull;
-            if (currentOrNull2 == null)
+            
+            PlaceholderContext currentPlaceholder = PlaceholderContext.CurrentOrNull;
+            if (currentPlaceholder == null)
                 return (IMarker)null;
-            return (IMarker)new TooltipMarker(currentOrNull1, currentOrNull2);
+
+            var isDerrivedFromToolTipRenderingType = currentRendering.ContextItem.IsDerived(RenderingsTemplatesIds.ExpTooltipControllerRendering) ||
+            currentRendering.ContextItem.IsDerived(RenderingsTemplatesIds.ExpTooltipViewRendering);
+
+            if (isDerrivedFromToolTipRenderingType)
+                return (IMarker)null;
+
+            return (IMarker)new TooltipMarker(currentRendering, currentPlaceholder);
         }
+
+
     }
 }
