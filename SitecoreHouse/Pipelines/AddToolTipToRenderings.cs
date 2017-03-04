@@ -36,12 +36,9 @@ namespace SitecoreHouse.Pipelines
             RenderingContext currentOrNull1 = RenderingContext.CurrentOrNull;
             if (currentOrNull1 == null || currentOrNull1.Rendering == null)
                 return (IMarker)null;
-            //if (!currentOrNull1.Rendering.IsXmlBasedRendering())
-            //    return (IMarker)null;
             PlaceholderContext currentOrNull2 = PlaceholderContext.CurrentOrNull;
             if (currentOrNull2 == null)
                 return (IMarker)null;
-            //return (IMarker)null;
             return (IMarker)new TooltipMarker(currentOrNull1, currentOrNull2);
         }
     }

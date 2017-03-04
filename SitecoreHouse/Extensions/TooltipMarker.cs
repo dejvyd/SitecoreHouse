@@ -43,21 +43,12 @@ namespace SitecoreHouse.Extensions
 
         public virtual string GetEnd()
         {
-            return "</div><div class=\"koniec-jebania\"></div>";
-            //if (this.ClientData == null)
-            //    return string.Empty;
-            //return Placeholder.GetControlEndMarker(this.clientData, string.Empty);
+            return string.Empty;
         }
 
         public virtual string GetStart()
         {
-            return "<div class=\"start-jebania\">";
-            //ChromeData clientData = this.ClientData;
-            //if (clientData == null)
-            //    return string.Empty;
-            //string @string = ID.Parse(this.renderingContext.Rendering.UniqueId).ToShortID().ToString();
-            //bool selectable = this.placeholderContext.IsEditable();
-            //return Placeholder.GetControlStartMarker(@string, clientData, selectable);
+            return "<div style=\"width: 20px; height: 20px; background-color: green; position: absolute;\"></div>";
         }
     }
 }
