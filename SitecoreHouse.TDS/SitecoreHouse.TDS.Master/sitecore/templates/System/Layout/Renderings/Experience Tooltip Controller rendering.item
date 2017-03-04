@@ -1,60 +1,41 @@
 ----item----
 version: 1
-id: {BCF4B89B-BE7F-4EE7-9D49-5206566442BB}
+id: {C5FB915D-CC94-4295-AE9F-0DDD69514CE5}
 database: master
-path: /sitecore/system/Settings/Rules/Insert Options/Rules/Experience Tooltip MVC Renderings
-parent: {FF0BC016-2D01-4F55-A020-EF6FC2FE7559}
-name: Experience Tooltip MVC Renderings
+path: /sitecore/templates/System/Layout/Renderings/Experience Tooltip Controller rendering
+parent: {531BF4A2-C3B2-4EB9-89D0-FA30C82AB33B}
+name: Experience Tooltip Controller rendering
 master: {00000000-0000-0000-0000-000000000000}
-template: {664E5035-EB8C-4BA1-9731-A098FCC9127A}
-templatekey: Insert Options Rule
-created: 20170304T083152Z
+template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
+templatekey: Template
+created: 20170304T144914Z
 
 ----field----
-field: {FA307B86-DA2A-44BD-887D-E2057CDB4948}
-name: Rule
-key: rule
-content-length: 1311
+field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
+name: __Base template
+key: __base template
+content-length: 38
 
-<ruleset>
-  <rule uid="{2E89945B-16DE-4654-97BE-D820EA843AA9}">
-    <conditions>
-      <or uid="ACE6BE1F0EE4458FA7545142146A0095">
-        <and uid="0396B677E8A94B49A4975683FB224491">
-          <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="E6A4E56AFFFB414C99B3267C53B8D3B1" itemid="{32566F0E-7686-45F1-A12F-D7260BD78BC3}" />
-          <condition id="{5DE6D53E-EA62-4D17-8BDD-FEBCD80AC07B}" uid="29A964FFD95D4B41890EDDA95C2DEBF9" templateid="{239F9CF4-E5A0-44E0-B342-0F32CD4C6D8B}" />
-        </and>
-        <and uid="EEF5C82442AE4218A4B12C2AF6F9E2D5">
-          <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="010DF64491564187B6C72B288774590C" itemid="{32566F0E-7686-45F1-A12F-D7260BD78BC3}" />
-          <condition id="{5DE6D53E-EA62-4D17-8BDD-FEBCD80AC07B}" uid="881E4E9984B94A9B85314F7502C6D38F" templateid="{7EE0975B-0698-493E-B3A2-0B2EF33D0522}" />
-        </and>
-      </or>
-    </conditions>
-    <actions>
-      <action id="{918FFCF0-F9E1-4DB6-A191-3EFA5A91C583}" uid="{F1E653AA-B941-4B4F-8372-CC3B29CA3976}" insertoptionid="{0EDFEFE3-064C-44E4-AD39-962276DABF34}" />
-      <action id="{918FFCF0-F9E1-4DB6-A191-3EFA5A91C583}" uid="B12C4FF1723A4B43AE4A23B6DB9D56EF" insertoptionid="{C5FB915D-CC94-4295-AE9F-0DDD69514CE5}" />
-    </actions>
-  </rule>
-</ruleset>
+{2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 26
+
+Software/16x16/element.png
 ----version----
 language: da
 version: 1
-revision: 04be5c2d-0c53-48b4-9a03-06d688f0e3ea
+revision: 1a5c35d2-3179-4c36-9892-f9279defe010
 
-----field----
-field: {9E0287D9-AF90-41AD-8D36-332375E194D6}
-name: Name
-key: name
-content-length: 143
-
-Når elementet er et underelement af renderinger, og skabelonen er en renderingsmappe eller en knude, skal du indsætte en mulighed for Mvc-typer
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 15
+content-length: 19
 
-Mvc-renderinger
+Controllerrendering
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -68,7 +49,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20161221T104324Z
+20161221T104327Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -82,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-04be5c2d-0c53-48b4-9a03-06d688f0e3ea
+1a5c35d2-3179-4c36-9892-f9279defe010
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161221T104324Z
+20161221T104327Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -100,22 +81,15 @@ sitecore\admin
 ----version----
 language: de-DE
 version: 1
-revision: bd9f5eb7-1439-4c54-8258-7414d420a0e2
+revision: 9f79f5a9-69db-4ca1-8e60-99707c34b494
 
-----field----
-field: {9E0287D9-AF90-41AD-8D36-332375E194D6}
-name: Name
-key: name
-content-length: 150
-
-Wenn das Item ein Subitem von Renderings ist und das Template ein Ordner, Rendering Ordner oder Knoten, fügen Sie Einfügen-Option für Mvc Typen hinzu.
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 14
+content-length: 20
 
-Mvc Renderings
+Controller Rendering
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -129,7 +103,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20161221T104759Z
+20161221T104802Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -143,14 +117,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-bd9f5eb7-1439-4c54-8258-7414d420a0e2
+9f79f5a9-69db-4ca1-8e60-99707c34b494
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161221T104759Z
+20161221T104802Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -161,15 +135,8 @@ sitecore\admin
 ----version----
 language: en
 version: 1
-revision: 43b1dbf9-b8b4-4c31-86d0-af824db45997
+revision: 6a1cbe70-cfa3-4f67-ae12-322bfc949555
 
-----field----
-field: {9E0287D9-AF90-41AD-8D36-332375E194D6}
-name: Name
-key: name
-content-length: 133
-
-When item is a subitem of Renderings and the template is Rendering Folder or Node, add insert option for Experience Tooltip MVC types
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -183,7 +150,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20080923T063739Z
+20080521T135632Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -197,14 +164,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-43b1dbf9-b8b4-4c31-86d0-af824db45997
+6a1cbe70-cfa3-4f67-ae12-322bfc949555
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170304T145124Z
+20170304T144942Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -215,22 +182,15 @@ sitecore\Admin
 ----version----
 language: ja-JP
 version: 1
-revision: bccf575d-9c1e-444c-b2b0-1ce72074f064
+revision: 2f7117f5-05c9-4910-82e6-00c067390ed1
 
-----field----
-field: {9E0287D9-AF90-41AD-8D36-332375E194D6}
-name: Name
-key: name
-content-length: 89
-
-アイテムが「レンダリングのサブアイテム」かつ「ノード」または「フォルダー」または「レンダリング フォルダー」テンプレートを使用している場合、挿入オプションに MVC 型を追加する
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 10
+content-length: 14
 
-MVC レンダリング
+コントローラー レンダリング
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -244,7 +204,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20161221T105203Z
+20161221T105207Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -258,14 +218,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-bccf575d-9c1e-444c-b2b0-1ce72074f064
+2f7117f5-05c9-4910-82e6-00c067390ed1
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161221T105203Z
+20161221T105207Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

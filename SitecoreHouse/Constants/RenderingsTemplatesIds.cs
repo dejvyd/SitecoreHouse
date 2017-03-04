@@ -10,10 +10,11 @@ namespace SitecoreHouse.Constants
         /// <summary>
         /// The exp tooltip view rendering template id
         /// </summary>
-        public static ID ExpTooltipViewRendering = new ID("{987B9A4E-CB93-48A7-81A7-9DA5C6EED7EC}");
+        public static ID ExpTooltipViewRendering = new ID("{0EDFEFE3-064C-44E4-AD39-962276DABF34}");
+
         /// <summary>
         /// The exp tooltip controller rendering template id
         /// </summary>
-        public static ID ExpTooltipControllerRendering = new ID("{987B9A4E-CB93-48A7-81A7-9DA5C6EED7EC}");
+        public static ID ExpTooltipControllerRendering = new ID("{C5FB915D-CC94-4295-AE9F-0DDD69514CE5}");
     }
 }

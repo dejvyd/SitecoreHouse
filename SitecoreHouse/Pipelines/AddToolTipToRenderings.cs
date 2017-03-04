@@ -21,7 +21,9 @@ namespace SitecoreHouse.Pipelines
         /// <param name="args">The arguments.</param>
         public override void Process(RenderRenderingArgs args)
         {
-            if (!string.IsNullOrEmpty(args.Rendering.DataSource) && args.PageContext.Item.Database.Name != "core" && args.PageContext.Item.Database.GetItem(args.Rendering.DataSource) == null)
+            if (!string.IsNullOrEmpty(args.Rendering.DataSource) && 
+                args.PageContext.Item.Database.Name != "core" && 
+                args.PageContext.Item.Database.GetItem(args.Rendering.DataSource) == null)
             {
                 Log.Warn(string.Format("'{0}' is not valid datasource.", (object)args.Rendering.DataSource), (object)this);
                 args.AbortPipeline();
@@ -29,13 +31,21 @@ namespace SitecoreHouse.Pipelines
             else
             {
                 if (args.Rendered || Context.Site == null || !Context.PageMode.IsExperienceEditorEditing)
+                {
                     return;
-                IMarker marker = this.GetMarker();
+                }
+
+                var marker = this.GetMarker();
                 if (marker == null)
+                {
                     return;
-                int index = args.Disposables.FindIndex((Predicate<IDisposable>)(x => x.GetType() == typeof(Wrapper)));
+                }
+
+                var index = args.Disposables.FindIndex((Predicate<IDisposable>)(x => x.GetType() == typeof(Wrapper)));
                 if (index < 0)
+                {
                     index = 0;
+                }
                 args.Disposables.Insert(index, (IDisposable)new Wrapper(args.Writer, marker));
             }
         }
@@ -45,23 +55,29 @@ namespace SitecoreHouse.Pipelines
         /// <returns>Html marker</returns>
         protected virtual IMarker GetMarker()
         {
-            RenderingContext currentRendering = RenderingContext.CurrentOrNull;
-            if (currentRendering == null || currentRendering.Rendering == null)
+            var currentRendering = RenderingContext.CurrentOrNull;
+            if (currentRendering == null || 
+                currentRendering.Rendering == null || 
+                currentRendering.Rendering.RenderingItem == null ||
+                currentRendering.Rendering.RenderingItem.InnerItem == null)
+            {
                 return (IMarker)null;
+            }
             
-            PlaceholderContext currentPlaceholder = PlaceholderContext.CurrentOrNull;
+            var currentPlaceholder = PlaceholderContext.CurrentOrNull;
             if (currentPlaceholder == null)
+            {
                 return (IMarker)null;
+            }
 
-            var isDerrivedFromToolTipRenderingType = currentRendering.ContextItem.IsDerived(RenderingsTemplatesIds.ExpTooltipControllerRendering) ||
-            currentRendering.ContextItem.IsDerived(RenderingsTemplatesIds.ExpTooltipViewRendering);
+            var renderingItem = currentRendering.Rendering.RenderingItem.InnerItem;
+            if (renderingItem.IsDerived(RenderingsTemplatesIds.ExpTooltipControllerRendering) ||
+                renderingItem.IsDerived(RenderingsTemplatesIds.ExpTooltipViewRendering))
+            {
+                return (IMarker)new TooltipMarker(currentRendering, currentPlaceholder);
+            }
 
-            if (isDerrivedFromToolTipRenderingType)
-                return (IMarker)null;
-
-            return (IMarker)new TooltipMarker(currentRendering, currentPlaceholder);
+            return (IMarker)null;
         }
-
-
     }
 }

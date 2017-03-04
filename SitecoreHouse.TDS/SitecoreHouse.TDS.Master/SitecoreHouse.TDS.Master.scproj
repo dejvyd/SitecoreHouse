@@ -20,7 +20,7 @@
     <AssemblyName>SitecoreHouse.TDS.Master</AssemblyName>
     <Name>SitecoreHouse.TDS.Master</Name>
     <RootNamespace>SitecoreHouse.TDS.Master</RootNamespace>
-    <EnableCodeGeneration>True</EnableCodeGeneration>
+    <EnableCodeGeneration>False</EnableCodeGeneration>
     <FieldsForCodeGen>Title,Blob,Shared,Unversioned,Default value,Validation,ValidationText,__Long description,__Short description,__Display name,__Hidden,__Read Only,__Sortorder</FieldsForCodeGen>
     <CodeGenTargetProject>SitecoreHouse.TDS.Model</CodeGenTargetProject>
     <CodeGenFile>Master.cs</CodeGenFile>
@@ -62,15 +62,6 @@
     <AssemblyAttributes Include="AssemblyVersion">
       <Value>$(AssemblyVersion)</Value>
     </AssemblyAttributes>
-  </ItemGroup>
-  <ItemGroup>
-    <CodeGenTemplate Include="Code Generation Templates\generalextensions.tt" />
-    <CodeGenTemplate Include="Code Generation Templates\glassheader.tt" />
-    <CodeGenTemplate Include="Code Generation Templates\glassitem.tt" />
-    <CodeGenTemplate Include="Code Generation Templates\helpers.tt" />
-    <CodeGenTemplate Include="Code Generation Templates\inflector.tt" />
-    <CodeGenTemplate Include="Code Generation Templates\itempaths.tt" />
-    <CodeGenTemplate Include="Code Generation Templates\stringextensions.tt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\SitecoreHouse\SitecoreHouse.csproj">
@@ -132,6 +123,10 @@
       <ItemDeployment>DeployOnce</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\System\Layout\Renderings.item">
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\System\Layout\Renderings\Experience Tooltip Controller rendering.item">
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>

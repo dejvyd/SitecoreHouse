@@ -1,12 +1,9 @@
-﻿using Sitecore;
-using Sitecore.Data;
-using Sitecore.Diagnostics;
-using Sitecore.Layouts;
+﻿using Sitecore.Diagnostics;
 using Sitecore.Mvc.ExperienceEditor.Presentation;
 using Sitecore.Mvc.Presentation;
 using Sitecore.Pipelines.GetChromeData;
 using Sitecore.Web.UI.PageModes;
-using Sitecore.Web.UI.WebControls;
+using SitecoreHouse.Constants;
 
 namespace SitecoreHouse.Extensions
 {
@@ -20,14 +17,17 @@ namespace SitecoreHouse.Extensions
         /// The rendering context
         /// </summary>
         private readonly RenderingContext renderingContext;
+
         /// <summary>
         /// The placeholder context
         /// </summary>
         private readonly PlaceholderContext placeholderContext;
+
         /// <summary>
         /// The client data
         /// </summary>
         private ChromeData clientData;
+
         /// <summary>
         /// Gets the client data.
         /// </summary>
@@ -41,6 +41,7 @@ namespace SitecoreHouse.Extensions
                 return this.clientData ?? (this.clientData = this.GetClientData());
             }
         }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TooltipMarker"/> class.
         /// </summary>
@@ -53,32 +54,46 @@ namespace SitecoreHouse.Extensions
             this.renderingContext = renderingContext;
             this.placeholderContext = placeholderContext;
         }
+
         /// <summary>
         /// Gets the client data.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Client data</returns>
         protected virtual ChromeData GetClientData()
         {
-            GetChromeDataArgs args = new GetChromeDataArgs("rendering", this.renderingContext.Rendering.Item);
+            var args = new GetChromeDataArgs("rendering", this.renderingContext.Rendering.Item);
             GetChromeDataPipeline.Run(args);
+
             return args.ChromeData;
         }
+
         /// <summary>
         /// Gets the end marker.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>End tag</returns>
         public virtual string GetEnd()
         {
             return string.Empty;
         }
+
         /// <summary>
         /// Gets the start marker.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Start tag</returns>
         public virtual string GetStart()
         {
-            string tooltipText = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ornare eu tortor auctor pulvinar. Mauris vulputate, dolor sed feugiat tempus.";
-            return "<div class=\"sh-comments ninja\">" + tooltipText + "</div>";
+            if (this.renderingContext == null ||
+                this.renderingContext.Rendering == null ||
+                this.renderingContext.Rendering.Parameters == null)
+            {
+                return string.Empty;
+            }
+
+            var tooltipText = this.renderingContext.Rendering.Parameters["Content"];
+
+            return string.IsNullOrWhiteSpace(tooltipText)
+                ? string.Empty
+                : "<div class=\"sh-comments ninja\">" + tooltipText + "</div>";
         }
     }
 }
