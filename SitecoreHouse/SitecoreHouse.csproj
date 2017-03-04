@@ -141,7 +141,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pipelines\AddToolTipToEndOfRenderings.cs" />
+    <Compile Include="Extensions\TooltipMarker.cs" />
     <Compile Include="Pipelines\AddToolTipToRenderings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -153,7 +153,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Extensions\" />
     <Folder Include="Models\" />
     <Folder Include="Presentation\" />
   </ItemGroup>

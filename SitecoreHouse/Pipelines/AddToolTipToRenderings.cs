@@ -4,6 +4,7 @@ using Sitecore.Diagnostics;
 using Sitecore.Mvc.ExperienceEditor.Presentation;
 using Sitecore.Mvc.Pipelines.Response.RenderRendering;
 using Sitecore.Mvc.Presentation;
+using SitecoreHouse.Extensions;
 
 namespace SitecoreHouse.Pipelines
 {
@@ -40,8 +41,8 @@ namespace SitecoreHouse.Pipelines
             PlaceholderContext currentOrNull2 = PlaceholderContext.CurrentOrNull;
             if (currentOrNull2 == null)
                 return (IMarker)null;
-            return (IMarker)null;
-            //return (IMarker)new RenderingMarker(currentOrNull1, currentOrNull2);
+            //return (IMarker)null;
+            return (IMarker)new TooltipMarker(currentOrNull1, currentOrNull2);
         }
     }
 }
